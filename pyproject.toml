@@ -1,0 +1,19 @@
+[project]
+name = "dup-resist"
+version = "0.1.0"
+description = "Tools for detecting gene conversion among duplicated genes"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Dup-Resist Maintainers"}]
+dependencies = [
+    "matplotlib>=3.5",
+]
+
+[project.scripts]
+dup-resist-detect = "scripts.detect_gene_conversion:main"
+dup-resist-merge = "scripts.merge_gene_conversion_results:main"
+dup-resist-plot = "scripts.plot_gene_conversion:main"
+singletonfx = "scripts.singletonfx:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
